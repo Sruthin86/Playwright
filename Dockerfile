@@ -3,3 +3,4 @@ FROM python:3.11
 RUN pip install pytest-playwright
 # install playwright
 RUN playwright install
+
