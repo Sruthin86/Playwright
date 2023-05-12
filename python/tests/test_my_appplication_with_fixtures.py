@@ -18,7 +18,7 @@ def test_turf_grass(page: Page):
     # Expect an attribute "to be strictly equal" to the value.
     expect(browse).to_have_attribute("href", '/search?&fq=subject_display:("Turf management" OR Turfgrasses OR Grasses)')
 
-    # Click the get started link.
+    # Click the browse link.
     browse.click()
     expect(page).to_have_url(re.compile("/search"))
 
@@ -29,7 +29,7 @@ def test_turf_grass(page: Page):
     # Expect an attribute "to be strictly equal" to the value.
     expect(browse).to_have_attribute("href", '/search?fq=genre_aat:Cookbooks')
 
-    # Click the get started link.
+    # Click the browse link.
     browse.click()
     expect(page).to_have_url(re.compile("/search"))
     

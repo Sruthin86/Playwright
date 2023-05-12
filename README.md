@@ -53,6 +53,10 @@ pytest test_file_name.py --browser webkit --browser firefox
 ```
 pytest --numprocesses auto
 ```
+* Running test in debug mode in an editor of your choice
+```
+PWDEBUG=1 pytest -s
+```
 
 ## Setup Commands (TODO - Convert this to an ansible script)
 * `docker run -it playwright bash`  run the image as a container
