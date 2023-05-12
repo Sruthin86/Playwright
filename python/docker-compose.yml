@@ -4,3 +4,6 @@ services:
   python:
     build: .
     tty: true
+    container_name: playwright_python
+    volumes:
+      - ./tests:/opt/tests

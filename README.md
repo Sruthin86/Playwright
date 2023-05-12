@@ -17,5 +17,6 @@
 ## Setup Commands (TODO - Convert this to an ansible script)
 * `docker run -it playwright bash`  run the image as a container
 * Install docker compose using `sudo apt-install docker-compose`
-* Run the image using docker compose in  detached mode `docker compose up`
+* Build and run the docker image using ` docker-compose up -d --build`
+* Run the image using docker compose in  detached mode `docker-compose up -d`
 
