@@ -7,6 +7,10 @@
 * Playwright offers native mobile emulation of Google Chrome for Android and Mobile Safari.
 * Playwright API can be used with Python, Javascript, Typescript, .NET, and Java.
 
+## Test Isolation
+* The Playwright Pytest plugin is based on the concept of test fixtures such as the built in page fixture, which is passed into your test. 
+* Pages are isolated between tests due to the Browser Context, which is equivalent to a brand new browser profile, where every test gets a fresh environment, even when multiple tests run in a single Browser.
+
 ## Testing using pytest
 
 ## Testing using node
