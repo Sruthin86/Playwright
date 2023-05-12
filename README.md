@@ -15,8 +15,44 @@
 
 ## Testing using node
 
-### Running testing in UI Mode
+### Running testing
 * [Running tests](https://playwright.dev/docs/intro)
+
+* Running tests on Chromium
+```
+pytest
+```
+
+* Running a single test file
+```
+pytest test_file_name.py
+```
+* Run a set of test files
+```
+pytest tests/first-page/ tests/next-page/
+```
+* Run the test with the function name
+```
+pytest -k "test_function_name"
+```
+
+* Running tests in headed mode
+```
+pytest --headed test_login.py
+```
+
+* Running Tests on specific browsers
+```
+pytest test_file_name.py --browser webkit
+```
+* Running Tests on multiple browsers
+```
+pytest test_file_name.py --browser webkit --browser firefox
+```
+* Running Tests in parallel
+```
+pytest --numprocesses auto
+```
 
 ## Setup Commands (TODO - Convert this to an ansible script)
 * `docker run -it playwright bash`  run the image as a container
