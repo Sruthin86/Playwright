@@ -77,11 +77,13 @@ api_request_context.head(url)
 ```
 
 ### Pytest Fixtures
-* function - This is the default scope. The fixture setup and teardown is performed for each test function that requests it.
-* class - The fixture setup and teardown is performed once per test class. Even if multiple test functions within the test classe, the fixture setup/teardown will only be performed once.
-* module - The fixture setup and teardown is performed once per module. If you have multiple test functions within a module requesting the same fixture, the fixture setup/teardown will be performed once.
-* package - The fixture setup and teardown is performed once per package. No matter how many tests request the fixture, the fixture setup/teardown will only be performed once.
-* session - The fixture setup and teardown is performed only once per session, regardless of the number of tests requesting it. A session is simply a single Pytest executed run.
+
+#### Scopes
+* `function` - This is the default scope. The fixture setup and teardown is performed for each test function that requests it.
+* `class` - The fixture setup and teardown is performed once per test class. Even if multiple test functions within the test classe, the fixture setup/teardown will only be performed once.
+* `module` - The fixture setup and teardown is performed once per module. If you have multiple test functions within a module requesting the same fixture, the fixture setup/teardown will be performed once.
+* `package` - The fixture setup and teardown is performed once per package. No matter how many tests request the fixture, the fixture setup/teardown will only be performed once.
+* `session` - The fixture setup and teardown is performed only once per session, regardless of the number of tests requesting it. A session is simply a single Pytest executed run.
 
 
 ## Setup Commands (TODO - Convert this to an ansible script)
