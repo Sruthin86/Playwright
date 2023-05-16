@@ -58,6 +58,32 @@ pytest --numprocesses auto
 PWDEBUG=1 pytest -s
 ```
 
+### API Testing
+* Playwright can be used to get access to the REST API of your application.
+* It uses `APIRequestContext` methods to test REST API. 
+* [APIRequestContext](https://playwright.dev/python/docs/api/class-apirequestcontext) can send all kinds of HTTP(S) requests over network.
+```
+api_request_context.get(url, params=query_params)
+
+api_request_context.post(url, **kwargs)
+
+api_request_context.put(url, **kwargs)
+
+api_request_context.delete(url, **kwargs)
+```
+* Requesting headers of a url
+```
+api_request_context.head(url)
+```
+
+### Pytest Fixtures
+* function - This is the default scope. The fixture setup and teardown is performed for each test function that requests it.
+* class - The fixture setup and teardown is performed once per test class. Even if multiple test functions within the test classe, the fixture setup/teardown will only be performed once.
+* module - The fixture setup and teardown is performed once per module. If you have multiple test functions within a module requesting the same fixture, the fixture setup/teardown will be performed once.
+* package - The fixture setup and teardown is performed once per package. No matter how many tests request the fixture, the fixture setup/teardown will only be performed once.
+* session - The fixture setup and teardown is performed only once per session, regardless of the number of tests requesting it. A session is simply a single Pytest executed run.
+
+
 ## Setup Commands (TODO - Convert this to an ansible script)
 * `docker run -it playwright bash`  run the image as a container
 * Install docker compose using `sudo apt-install docker-compose`

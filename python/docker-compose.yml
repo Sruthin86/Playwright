@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   python:
-    build: .
+    image: playwright:latest
     tty: true
     container_name: playwright_python
     volumes:
