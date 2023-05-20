@@ -22,7 +22,7 @@ def test_turf_grass(page: Page):
     browse.click()
     expect(page).to_have_url(re.compile("/search"))
 
-def test_turf_grass(page: Page):
+def test_turf_cookbooks(page: Page):
     # find the browse link
     browse = page.get_by_role("link", name="Cookbooks")
 
