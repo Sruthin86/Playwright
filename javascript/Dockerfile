@@ -6,8 +6,10 @@ RUN mkdir /opt/my_app
 WORKDIR /opt/my_app
 # Copy npm package.json
 COPY package.json ./
+# Install axe plugin
+RUN npm install @axe-core/playwright
 # Run npm install to install any dependencies in the package json
 RUN  npm install
-# copy tests from the current dir to the container
+# Copy tests from the current dir to the container
 COPY ./tests /opt/my_app/tests
 
