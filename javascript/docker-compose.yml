@@ -2,5 +2,8 @@ version: "3.3"
 
 services:
   javascript:
-    build: .
+    image: playwright-jammy:latest
     tty: true
+    container_name: playwright_js
+    volumes:
+      - ./tests:/opt/my_app/tests

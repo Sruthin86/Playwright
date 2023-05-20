@@ -1,5 +1,13 @@
-FROM node:buster-slim
+# Get the latest version of Playwright
+FROM mcr.microsoft.com/playwright:v1.34.0-jammy
 
-# install playwright using NPM
-RUN npm init playwright@latest
+# mkdir for the application tests 
+RUN mkdir /opt/my_app
+WORKDIR /opt/my_app
+# Copy npm package.json
+COPY package.json ./
+# Run npm install to install any dependencies in the package json
+RUN  npm install
+# copy tests from the current dir to the container
+COPY ./tests /opt/my_app/tests
 

@@ -14,9 +14,7 @@
 
 ## Testing using pytest
 
-## Testing using node
-
-### Running testing
+### Running tests
 * [Running tests](https://playwright.dev/docs/intro)
 
 * Running tests on Chromium
@@ -88,11 +86,65 @@ api_request_context.delete(url, **kwargs)
 api_request_context.head(url)
 ```
 
+## Testing using npx
+
+### Running tests
+* [Running tests](https://playwright.dev/docs/intro)
+
+* Running tests on Chromium
+```
+ npx playwright test
+```
+
+* Running a single test file
+```
+npx playwright test test_file_name.py
+```
+* Run a set of test files
+```
+npx playwright test tests/first-page/ tests/next-page/
+```
+* Run the test with the "string" in file name
+```
+npx playwright test {string1} {string2}
+```
+
+* Running tests in headed mode
+```
+npx playwright test test_login.py --headed
+```
+
+* Running Tests on specific browsers
+```
+npx playwright test --browser=firefox
+```
+* Running Tests on all browsers
+```
+npx playwright test --browser=all
+```
+* Running Tests on multiple browsers
+```
+npx playwright test test_file_name.py --browser webkit --browser firefox
+```
+* Running Tests in parallel
+```
+npx playwright test --numprocesses auto
+```
+* Running test in debug mode in an editor of your choice
+```
+PWDEBUG=1 npx playwright test -s
+```
 
 
-## Setup Commands (TODO - Convert this to an ansible script)
-* `docker run -it playwright bash`  run the image as a container
+## Setup Commands - Python project (TODO - Convert this to an ansible script)
 * Install docker compose using `sudo apt-install docker-compose`
 * Build the docker image using `docker build . -t playwright`
+* Run the image as a container using `docker run -it playwright bash`
+* Run the image using docker compose in  detached mode `docker-compose up -d`
+
+## Setup Commands - JavaScript project (TODO - Convert this to an ansible script)
+* Install docker compose using `sudo apt-install docker-compose`
+* Build the docker image using `docker build . -t playwright-jammy`
+* Run the image as a container using `docker run -it playwright-jammy bash`
 * Run the image using docker compose in  detached mode `docker-compose up -d`
 
