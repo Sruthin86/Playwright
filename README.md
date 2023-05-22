@@ -111,7 +111,7 @@ npx playwright test {string1} {string2}
 
 * Running tests in headed mode
 ```
-npx playwright test test_login.py --headed
+npx playwright test test_login --headed
 ```
 
 * Running Tests on specific browsers
@@ -132,7 +132,7 @@ npx playwright test --numprocesses auto
 ```
 * Running test in debug mode in an editor of your choice
 ```
-PWDEBUG=1 npx playwright test -s
+PWDEBUG=1 npx playwright test
 ```
 
 
