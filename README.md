@@ -56,6 +56,10 @@ pytest --numprocesses auto
 ```
 PWDEBUG=1 pytest -s
 ```
+* Generate test code using pytest
+```
+playwright codegen
+```
 ### Pytest Fixtures
 * Test fixtures are used to establish environment for each test, giving the test everything it needs and nothing else.
 * Fixtures are isolated between each tests
@@ -133,6 +137,10 @@ npx playwright test --numprocesses auto
 * Running test in debug mode in an editor of your choice
 ```
 PWDEBUG=1 npx playwright test
+```
+* Generate tests using codegen
+```
+npx playwright codegen
 ```
 
 
