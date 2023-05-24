@@ -12,6 +12,20 @@
 * The Playwright Pytest plugin is based on the concept of test fixtures such as the built in page fixture, which is passed into your test. 
 * Pages are isolated between tests due to the Browser Context, which is equivalent to a brand new browser profile, where every test gets a fresh environment, even when multiple tests run in a single Browser.
 
+## Playwright Locators
+* [Locators](https://playwright.dev/docs/locators) represent a way to find elements on the page at the given state of the page
+* Recommended built in locators
+```
+page.getByRole() to locate by explicit and implicit accessibility attributes.
+page.getByText() to locate by text content.
+page.getByLabel() to locate a form control by associated label's text.
+page.getByPlaceholder() to locate an input by placeholder.
+page.getByAltText() to locate an element, usually image, by its text alternative.
+page.getByTitle() to locate an element by its title attribute.
+page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
+
+```
+
 ## Testing using pytest
 
 ### Running tests
