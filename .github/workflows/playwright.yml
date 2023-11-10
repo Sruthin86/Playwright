@@ -8,15 +8,12 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    container:
-      image: '../../../javascript/Dockerfile'
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
+    - name: Build the docker image
+      run: docker build ./javascript -t playwright-jammy
     - name: Run Playwright tests
-      run: npx playwright test
+      run: docker run -it playwright-jammy npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
       with:
