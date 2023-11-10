@@ -13,7 +13,7 @@ jobs:
     - name: Build the docker image
       run: docker build ./javascript -t playwright-jammy
     - name: Run Playwright tests
-      run: docker run -it playwright-jammy npx playwright test
+      run: docker run playwright-jammy npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
       with:
