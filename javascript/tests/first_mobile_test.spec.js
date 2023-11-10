@@ -4,8 +4,8 @@ test.use({
   viewport: { width: 390, height: 844 },
 });
 
-test('Check spaces link', async ({ page }) => {
-  await page.goto('https://mainweb9.lib.msu.edu/');
+test('Check events and workshops link', async ({ page }) => {
+  await page.goto('https://lib.msu.edu/');
 
   // Click the library spaces link.
   await page.getByRole('link', { name: 'View all Events & Workshops' }).click();

@@ -1,24 +1,24 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('https://mainweb9.lib.msu.edu/');
+  await page.goto('https://lib.msu.edu/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Home/);
 });
 
 test('Check spaces link', async ({ page }) => {
-  await page.goto('https://mainweb9.lib.msu.edu/');
+  await page.goto('https://lib.msu.edu/');
 
   // Click the library spaces link.
   await page.getByRole('link', { name: 'Discover Library Spaces' }).first().click();
 
   // Expects the URL to contain spaces.
-  await expect(page).toHaveURL('https://mainweb9.lib.msu.edu/spaces');
+  await expect(page).toHaveURL('https://lib.msu.edu/spaces');
 });
 
 test('Check events link', async ({ page }) => {
-  await page.goto('https://mainweb9.lib.msu.edu/');
+  await page.goto('https://lib.msu.edu/');
 
   // Click the events link.
   await page.getByRole('link', { name: 'View all Events & Workshops' }).click();
