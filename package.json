@@ -1,0 +1,13 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "[Official Documentation](https://playwright.dev/python/) ## Overview * Playwright offers end to end testing for web applications. * Playwright is a Node js library made for browser autmation. This is open-source library made by developers at Microsfot. * Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox. * Playwright API can be used with Python, Javascript, Typescript, .NET, and Java. * Playwright offers native mobile emulation of Google Chrome for Android and Mobile Safari.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.34.0"
+  }
+}
