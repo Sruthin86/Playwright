@@ -1,5 +1,5 @@
 # Get the latest version of Playwright
-FROM mcr.microsoft.com/playwright:v1.34.0-jammy
+FROM mcr.microsoft.com/playwright:v1.39.0-jammy
 
 # mkdir for the application tests 
 RUN mkdir /opt/my_app
