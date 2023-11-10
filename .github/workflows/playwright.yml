@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     container:
-      image: '/javascript/Dockerfile'
+      image: '../../../javascript/Dockerfile'
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
