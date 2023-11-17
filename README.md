@@ -193,3 +193,6 @@ npx playwright codegen
 * Build the docker image using `docker build . -t playwright-jammy`
 * Run the image as a container using `docker run -it playwright-jammy bash`
 * Run the image using docker compose in  detached mode `docker-compose up -d`
+
+
+## Repo setup
