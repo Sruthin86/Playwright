@@ -11,7 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the docker image
-      if: github.actor == 'dependabot[bot]'
       run: docker build ./javascript -t playwright-jammy
     - name: Run Playwright tests
       run: docker run playwright-jammy npx playwright test --browser=firefox
