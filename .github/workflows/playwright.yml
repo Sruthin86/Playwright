@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build and push javascript docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          file: ./javascript/Dockerfile
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: 'latest'
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        file: ./javascript/Dockerfile
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: 'latest'
     - name: Run Playwright tests
       run: docker run playwright-jammy npx playwright test --browser=firefox
 
