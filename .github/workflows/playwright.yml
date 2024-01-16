@@ -13,7 +13,7 @@ jobs:
     - name: Build the docker image
       run: docker build ./javascript -t playwright-jammy
     - name: Cache docker image
-      uses: docker/build-push-action@v4
+      uses: docker/setup-buildx-action@v2
       with:
           context: .
           tags: ${{ steps.meta.outputs.tags }}
