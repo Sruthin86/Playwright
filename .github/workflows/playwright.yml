@@ -20,9 +20,3 @@ jobs:
         cache-to: type=gha,mode=max
     - name: Run Playwright tests
       run: docker run playwright-jammy npx playwright test --browser=firefox
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
