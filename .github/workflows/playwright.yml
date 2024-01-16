@@ -11,13 +11,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the docker image
+      uses: docker/build-push-action@v4
+      with:
+          context: .
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
       run: docker build ./javascript -t playwright-jammy
     - name: Run Playwright tests
       run: docker run playwright-jammy npx playwright test --browser=firefox
-      with:
-        context: .
-        push: true
-        tags: "<registry>/<image>:latest"
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
 
