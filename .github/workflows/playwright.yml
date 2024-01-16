@@ -12,6 +12,12 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the docker image
       run: docker build ./javascript -t playwright-jammy
+      with:
+        context: .
+        push: true
+        tags: "<registry>/<image>:latest"
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
     - name: Run Playwright tests
       run: docker run playwright-jammy npx playwright test --browser=firefox
     - uses: actions/upload-artifact@v3
