@@ -3,7 +3,7 @@ const AxeBuilder = require('@axe-core/playwright').default;
 
 test.describe('homepage', () => { // 2
   test('should not have any automatically detectable accessibility issues', async ({ page }) => {
-    await page.goto('https://lib.msu.edu/');
+    await page.goto('https://lib.msu.edu/accessibility');
 
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
