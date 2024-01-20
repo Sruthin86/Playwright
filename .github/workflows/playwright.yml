@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Playwright tests
-      run: docker run ghcr.io/sruthin86/playwright:latest npx playwright test --browser=firefox
+      run: |
+        docker login --username Sruthin86 --password ${{ secrets.GH.PAT }}
+        docker run ghcr.io/sruthin86/playwright:latest npx playwright test --browser=firefox
 
