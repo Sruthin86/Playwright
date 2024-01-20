@@ -11,6 +11,6 @@ jobs:
     steps:
     - name: Run Playwright tests
       run: |
-        docker login --username Sruthin86 --password ${{ secrets.GH_PAT }}
+        docker login --username Sruthin86 --password ${{ secrets.GH_PAT }} ghcr.io
         docker run ghcr.io/sruthin86/playwright:latest npx playwright test --browser=firefox
 
