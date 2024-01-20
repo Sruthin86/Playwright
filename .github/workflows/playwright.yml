@@ -9,6 +9,6 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - name: Build and javascript docker image
-      uses: Sruthin86/Playwright@v1
+    - name: Run Playwright tests
+      run: docker run ghcr.io/sruthin86/playwright:latest npx playwright test --browser=firefox
 

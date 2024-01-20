@@ -12,4 +12,3 @@ RUN npm install @axe-core/playwright
 RUN  npm install
 # Copy tests from the current dir to the container
 COPY ./tests /opt/my_app/tests
-
