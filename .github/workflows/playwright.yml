@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build and javascript docker image
-      uses: actions/playwright@v1
+      uses: actions/Playwright@v1
 
