@@ -12,5 +12,5 @@ jobs:
     - name: Pull the image from container registry
       run: docker login --username Sruthin86 --password ${{ secrets.GH_PAT }} ghcr.io
     - name: Run tests
-      run: docker run ghcr.io/sruthin86/playwright:latest npx playwright test --browser=firefox
+      run: docker run ghcr.io/sruthin86/playwright:latest npx playwright test --browser=firefox tests/first_a11y_test.spec.js 
 

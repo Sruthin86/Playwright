@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   javascript:
-    image: playwright-jammy:latest
+    image: ghcr.io/sruthin86/playwright:latest
     tty: true
     container_name: playwright_js
     volumes:
