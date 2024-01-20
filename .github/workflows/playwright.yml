@@ -5,19 +5,10 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
-  test:
+  run_tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - name: Build and push javascript docker image
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
-        file: ./javascript/Dockerfile
-        push: ${{ github.event_name != 'pull_request' }}
-        tags: 'latest'
-    - name: Run Playwright tests
-      run: docker run playwright-jammy npx playwright test --browser=firefox
+    - name: Build and javascript docker image
+      uses: actions/playwright@v1
 

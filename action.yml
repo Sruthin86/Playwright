@@ -1,0 +1,6 @@
+# Creates a GitHub Action used in GitHub Workflow
+name: 'Custom Playwright-Axe Image'
+description: 'Build a custom playwright image with axe dependency installed'
+runs:
+  using: 'docker'
+  image: 'javascript/Dockerfile'
